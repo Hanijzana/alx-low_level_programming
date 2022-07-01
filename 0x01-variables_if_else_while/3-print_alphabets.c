@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - main block 
+ * main - main block
  * Description: alphabets in lower and upper
  * Return: 0
  */
 int main(void)
 {
-char c = 'a';
+	char c = 'a';
 
-while (c <= 'z')
-{
-putchar(c);
-c++;
-}
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
 
-c = 'A';
+	c = 'A';
 
-while (c <= 'Z')
-{
-putchar(c);
-c++;
-}
-putchar('\n');
-return (0);
+	while (c <= 'Z')
+	{
+		putchar(c);
+		c++;
+	}
+	putchar('\n');
+	return (0);
 }
