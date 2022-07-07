@@ -28,7 +28,7 @@ int main(void)
 		{
 			printf("%i", i);
 		}
-		i++;
+		if (i != 100)
 		{
 			putchar(' ');
 		}
