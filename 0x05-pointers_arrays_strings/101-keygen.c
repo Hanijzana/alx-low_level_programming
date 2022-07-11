@@ -1,25 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 /**
  * main - generates random valid passwords
  * Return: 0 Always.
  */
+
 int main(void)
 {
-	int r = 0, c = 0;
-	time_t t;
+	char pick;
+	char comb[]
+		= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int i, rand_num, sum = 2772;
 
-	srand((unsigned int) time(&t));
-	while (c < 2772)
+	srand(time(NULL));
+	for (i = 0; sum > 200; i++)
 	{
-		r = rand() % 128;
-		if ((c + r) > 2772)
-			break;
-		c = c + r;
-		printf("%c", r);
+		rand_num = rand() % (sizeof(comb) - 1);
+		pick = comb[rand_num];
+		putchar(pick);
+		sum = sum - pick;
 	}
-	printf("%c\n", (2772 - c));
+
+	if (sum > 122)
+	{
+		putchar(sum / 2);
+		putchar((sum / 2) + (sum % 2));
+	}
+	else
+		putchar(sum);
+
 	return (0);
 }
 
