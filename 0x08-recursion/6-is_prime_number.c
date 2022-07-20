@@ -3,8 +3,8 @@
 /**
  * is_prime_number - prime number or not
  * @n: the numebr 
- * @i: 
- * Return: return 1 or 0
+ * @i: iteration
+ * Return: 1 if the integer is prime num otherwise 0
  */
 
 int actual_prime(int n, int i);
@@ -20,10 +20,10 @@ int is_prime_number(int n)
 
 /**
  * actual_prime - prime number
- * @n: the numebr
+ * @n: the numebr 
  * @i: iteration
  *
- * Return: return 1 or 0
+ * Return: 1 if the integer is prime num otherwise 0
  */
 
 int actual_prime(int n, int i)
